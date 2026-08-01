@@ -379,7 +379,9 @@ USER node
 # Built-in probe endpoints for container health checks:
 #   - GET /healthz (liveness) and GET /readyz (readiness)
 #   - aliases: /health and /ready
+
 # For external access from host/ingress, override bind to "lan" and set auth.
+COPY --chown=node:node openclaw.config.json ./openclaw.config.json
 HEALTHCHECK --interval=3m --timeout=10s --start-period=15s --retries=3 \
   CMD ["node", "dist/docker-healthcheck.js"]
 ENTRYPOINT ["tini", "-s", "--"]
