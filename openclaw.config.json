@@ -1,28 +1,31 @@
 {
-  "brain": {
-    "provider": "openai",
-    "model": "gpt-5.6-sol",
-    "api_key": "${OPENAI_API_KEY}"
-  },
   "models": {
+    "mode": "merge",
     "providers": {
-      "openai": {
+      "agentrouter": {
+        "baseUrl": "https://agentrouter.org/v1",
         "apiKey": "${OPENAI_API_KEY}",
-        "baseUrl": "https://agentrouter.org/v1"
+        "api": "openai-responses",
+        "models": [
+          {
+            "id": "gpt-5.6-sol",
+            "name": "gpt-5.6-sol",
+            "contextWindow": 200000
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "agentrouter/gpt-5.6-sol"
       }
     }
   },
   "channels": {
     "telegram": {
       "botToken": "${TELEGRAM_BOT_TOKEN}"
-    }
-  },
-  "gateway": {
-    "host": "0.0.0.0",
-    "port": 8080,
-    "auth": {
-      "mode": "token",
-      "token": "${OPENCLAW_GATEWAY_TOKEN}"
     }
   }
 }
