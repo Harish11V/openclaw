@@ -5,6 +5,9 @@
     "auth": {
       "mode": "token",
       "token": "${OPENCLAW_GATEWAY_TOKEN}"
+    },
+    "controlUi": {
+      "allowedOrigins": ["https://openclaw-9mqa.onrender.com"]
     }
   },
   "models": {
@@ -33,7 +36,12 @@
   },
   "channels": {
     "telegram": {
-      "botToken": "${TELEGRAM_BOT_TOKEN}"
+      "botToken": "${TELEGRAM_BOT_TOKEN}",
+      "dmPolicy": "allowlist",
+      "allowFrom": ["785585966"]
     }
+  },
+  "commands": {
+    "ownerAllowFrom": ["telegram:785585966"]
   }
 }
