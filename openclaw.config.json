@@ -46,5 +46,10 @@
   },
   "commands": {
     "ownerAllowFrom": ["telegram:785585966"]
+  },
+  "plugins": {
+    "memory-core": {
+      "enabled": false
+    }
   }
 }
