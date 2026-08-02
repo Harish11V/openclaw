@@ -41,39 +41,24 @@
     "telegram": {
       "botToken": "${TELEGRAM_BOT_TOKEN}",
       "dmPolicy": "allowlist",
-      "allowFrom": [
-        "785585966"
-      ]
+      "allowFrom": ["785585966"]
     }
   },
   "commands": {
-    "ownerAllowFrom": [
-      "telegram:785585966"
-    ]
+    "ownerAllowFrom": ["telegram:785585966"]
   },
   "plugins": {
     "entries": {
-      "memory-core": {
-        "enabled": false
-      },
-      "anthropic": {
-        "enabled": false
-      },
-      "canvas": {
-        "enabled": false
-      },
-      "linux-canvas": {
-        "enabled": false
-      },
-      "ollama": {
-        "enabled": false
-      },
-      "talk-voice": {
-        "enabled": false
-      },
-      "whatsapp": {
-        "enabled": false
-      }
+      "memory-core": { "enabled": false },
+      "memory-wiki": { "enabled": false },
+      "anthropic": { "enabled": false },
+      "browser": { "enabled": false },
+      "canvas": { "enabled": false },
+      "ollama": { "enabled": false },
+      "talk-voice": { "enabled": false },
+      "linux-canvas": { "enabled": false },
+      "linux-node": { "enabled": false },
+      "file-transfer": { "enabled": false }
     }
   }
 }
