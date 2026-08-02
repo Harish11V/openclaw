@@ -16,7 +16,7 @@
     "mode": "merge",
     "providers": {
       "agentrouter": {
-        "baseUrl": "https://co.agentrouter.org/v1",
+        "baseUrl": "https://agentrouter-proxy.harishrojers.workers.dev/v1",
         "apiKey": "${OPENAI_API_KEY}",
         "api": "openai-completions",
         "models": [
