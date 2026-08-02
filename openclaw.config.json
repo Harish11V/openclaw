@@ -7,7 +7,9 @@
       "token": "${OPENCLAW_GATEWAY_TOKEN}"
     },
     "controlUi": {
-      "allowedOrigins": ["https://openclaw-9mqa.onrender.com"]
+      "allowedOrigins": [
+        "https://openclaw-j41z.onrender.com"
+      ]
     }
   },
   "models": {
@@ -39,4 +41,10 @@
     "telegram": {
       "botToken": "${TELEGRAM_BOT_TOKEN}",
       "dmPolicy": "allowlist",
-      "allow
+      "allowFrom": ["785585966"]
+    }
+  },
+  "commands": {
+    "ownerAllowFrom": ["telegram:785585966"]
+  }
+}
